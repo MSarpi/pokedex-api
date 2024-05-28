@@ -1,0 +1,48 @@
+{
+    "navbar_header": {
+        "select": "ポケモンの名前またはID",
+        "search": "検索"
+    },
+    "navbar_body": {
+        "home": "ホーム",
+        "generation_1": "第1世代",
+        "generation_2": "第2世代",
+        "generation_3": "第3世代",
+        "generation_4": "第4世代",
+        "generation_5": "第5世代",
+        "generation_6": "第6世代",
+        "generation_7": "第7世代",
+        "generation_8": "第8世代",
+        "generation_9": "第9世代",
+        "poke_chat": "ポケチャット"        
+    },
+    "navbar_footer": {
+        "dark_mode": "ダークモード",
+        "select_language": "言語を選択"
+    },
+    "modal": {
+        "data": {
+            "tittle": "基本データ",
+            "pokemonid": "ポケモンID",
+            "type": "タイプ",
+            "height": "高さ",
+            "weight": "重さ",
+            "abilities": "能力"
+        },
+        "statistics": {
+            "tittle": "基本統計",
+            "hp": "HP",
+            "attack": "攻撃",
+            "attack_e": "特攻",
+            "defense": "防御",
+            "defense_e": "特防",
+            "speed": "素早さ"
+        },
+        "designs": {
+            "g_design": "世代のデザイン"
+        },
+        "evolution": {
+            "tittle": "進化"
+        }
+    }
+}

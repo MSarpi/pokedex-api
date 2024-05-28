@@ -1,0 +1,10 @@
+.flag-icon {
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+}
