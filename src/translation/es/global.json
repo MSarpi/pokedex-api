@@ -21,6 +21,11 @@
         "select_language": "Selecciona idioma"
     },
     "modal": {
+        "error": {
+            "tittle": "No seleccionaste un Pokemon",
+            "body": "Primero debes seleccionar y/o escribir su ID o Nombre del pokemon",
+            "footer": "Entendido"
+        },
         "data": {
             "tittle": "Datos Principales",
             "pokemonid": "ID Pokemon",

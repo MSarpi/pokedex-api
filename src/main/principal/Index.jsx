@@ -27,6 +27,7 @@ export default function Index() {
 
   return (
     <>
+
       <div className={`App ${darkMode ? "dark-mode" : ""}`}>
       {/* <ButtonMobile /> */}
       <div className="menu" onClick={toggleSidebar}>
@@ -41,7 +42,7 @@ export default function Index() {
       >
       <MiniNavbar sidebar={sidebar} setSidebar={setSidebar}/>
 
-      <Buscador sidebar={sidebar}/>
+      <Buscador sidebar={sidebar} darkMode={darkMode}/>
 
       <div className="linea"></div>
         <nav className="navegacion mt-3">
@@ -94,6 +95,7 @@ export default function Index() {
               )
             )}
           </Routes>
+          
         </main>
     </div>
     </>

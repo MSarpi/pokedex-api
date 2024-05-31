@@ -21,6 +21,11 @@
         "select_language": "言語を選択"
     },
     "modal": {
+        "error": {
+            "tittle": "ポケモンを選択していません",
+            "body": "まず、ポケモンのIDまたは名前を選択するか入力して情報を取得してください.",
+            "footer": "理解しました"
+        },
         "data": {
             "tittle": "基本データ",
             "pokemonid": "ポケモンID",

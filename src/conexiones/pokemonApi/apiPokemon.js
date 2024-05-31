@@ -1,4 +1,4 @@
-const BASE_URL_POKEMON = "https://pokeapi.co/api/v2/pokemon-species";
+const BASE_URL_POKEMON = "https://pokeapi.co/api/v2/pokemon-species/";
 
 export async function getPokemon(endpoint = "") {
     try {
@@ -37,7 +37,7 @@ export async function getAllPokemon() {
 
 
 
-const BASE_URL_POKEMON_ALL = "https://pokeapi.co/api/v2/pokemon";
+const BASE_URL_POKEMON_ALL = "https://pokeapi.co/api/v2/pokemon/";
 
 export async function getPokemonAll(endpoint = "") {
     try {
