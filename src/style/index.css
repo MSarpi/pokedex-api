@@ -100,12 +100,25 @@ html body .container-light  {
 }
 
 
+
+.marquee-container {
+  position: absolute; /* Posición absoluta para superposición */
+  top: 50%;
+  left: 0;
+  width: 100%; /* Ajusta según sea necesario */
+  height: auto; /* Ajusta según sea necesario */
+  z-index: 2; /* Coloca el marquee en un plano superior */
+}
+
+
 .buscador-pokemon{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
 
 .container-logo {
   background-position: 50%;
@@ -394,9 +407,25 @@ main.min-main{
   margin-left: 80px;
 }
 
+
+@media (max-width: 1920px){
+
+  .sizeCardCarouselPokemon{
+    width: 30rem;
+  }
+}
 @media (max-width: 1600px){
 
-  
+  .sizeCardCarouselPokemon{
+    width: 25rem;
+  }
+}
+
+@media (max-width: 1366px){
+
+  .sizeCardCarouselPokemon{
+    width: 20rem;
+  }
 }
 
 @media (max-width: 1100px){
@@ -461,4 +490,16 @@ main.min-main{
   }
   
 }
+
+@media (max-width: 400px){
+  .marquee-container {
+  
+    top: 30%;
+  }
+  .sizeCardCarouselPokemon{
+    width: 20rem;
+  }
+}
+
+
 /* .container-light */
