@@ -501,5 +501,13 @@ main.min-main{
   }
 }
 
+#codeGPTWidget {
+  width: 100% !important; /* Ajusta el tamaño según sea necesario */
+  height: 500px !important; /* Ajusta el tamaño según sea necesario */
+}
 
+#codeGPTWidget iframe {
+  width: 100% !important; /* Asegúrate de que el iframe llene el contenedor */
+  height: 100% !important; /* Asegúrate de que el iframe llene el contenedor */
+}
 /* .container-light */
