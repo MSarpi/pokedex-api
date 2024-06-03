@@ -54,6 +54,8 @@ html body .container-light  {
   --color-scroll:rgb(192,192,192); /*Color scroll*/
   --color-scroll-hover:rgb(134,134,134); /*Color hover scroll*/
   
+  --color-barra-busqueda: rgb(255,203,5);
+  --color-barra-border: rgb(0, 78, 167);
 }
 
 .dark-mode{
@@ -75,6 +77,12 @@ html body .container-light  {
 
   --color-scroll:rgb(68,69,74);
   --color-scroll-hover:rgb(85,85,85);
+
+  --color-scroll:rgb(192,192,192); /*Color scroll*/
+  --color-scroll-hover:rgb(134,134,134); /*Color hover scroll*/
+  
+  --color-barra-busqueda: rgb(192,192,192);
+  --color-barra-border: rgb(61, 61, 61);
 }
 
 *{
@@ -87,6 +95,9 @@ html body .container-light  {
   display: none;
 }
 
+.buscadorMobile{
+  display: none;
+}
 .main-home{
   width: 100%;
 }
@@ -99,6 +110,10 @@ html body .container-light  {
   height: 100vh;
 }
 
+.buscador-container{
+  display: none;
+}
+
 
 
 .marquee-container {
@@ -107,7 +122,7 @@ html body .container-light  {
   left: 0;
   width: 100%; /* Ajusta según sea necesario */
   height: auto; /* Ajusta según sea necesario */
-  z-index: 2; /* Coloca el marquee en un plano superior */
+  z-index: 1; /* Coloca el marquee en un plano superior */
 }
 
 
@@ -240,7 +255,7 @@ ol, ul {
 .barra-lateral .boton{
   width: 100%;
   height: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,9 +448,13 @@ main.min-main{
   
 }
 
-@media (max-width: 900px){
+@media (max-width: 950px){
   .img-home {
     background-image: url('../main/assets/img/background-second.jpg');
+  }
+
+  .sizeCardCarouselPokemon{
+    width: 29rem;
   }
   
 }
@@ -488,13 +507,56 @@ main.min-main{
   main.min-main{
       margin-left: 0;
   }
+
+  .buscadorMobile{
+    display: block;
+    z-index: 10;
+    position: absolute; /* 
+    Posición absoluta para superposición */
+    top: 35%;
+    left: 0;
+    width: 90%; /* Ajusta según sea necesario */
+
+    z-index: 2; /* Coloca el marquee en un plano superior */
+    background-color: var(--color-barra-busqueda);
+    border: 5px solid var(--color-barra-border);
+    border-radius: .7rem;
+    padding: .5rem;
+    text-align: center;
+    margin-left: 1.2rem;
+  }
   
+  .buscador-container{
+    display: block;
+    align-items: center;
+    align-content: center;
+  }
+
+  .boton-buscador-home{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-boton-texto);
+  }
+
+  .boton-buscador-home ion-icon{
+
+    font-size: 25px;
+  }
+/* 
+  --color-barra-busqueda: rgb(192,192,192);
+  --color-barra-border: rgb(61, 61, 61); */
 }
 
 @media (max-width: 400px){
   .marquee-container {
-  
-    top: 39%;
+    top: 50%;
   }
   .sizeCardCarouselPokemon{
     width: 20rem;

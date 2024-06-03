@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Select from 'react-select'
-import { getAllPokemon } from '../../../../conexiones/pokemonApi/apiPokemon'
+import { getAllPokemon } from '../../../conexiones/pokemonApi/apiPokemon';
 import { useTranslation } from 'react-i18next';
-import ModalPokemon from '../Modal/ModalPokemon';
-import ModalError from '../Modal/ModalError';
-import { formatPokemonName, capitalizeFirstLetter } from '../../../assets/function/funciones';
-
-export default function Buscador({ sidebar, darkMode }) {
+import ModalPokemon from '../../principal/component/Modal/ModalPokemon';
+import ModalError from '../../principal/component/Modal/ModalError';
+import { formatPokemonName, capitalizeFirstLetter } from '../../assets/function/funciones';
+import { Row, Col, Container } from 'react-bootstrap';
+export default function BuscadorHome({darkMode}) {
     const { t } = useTranslation();
     const [pokemonList, setPokemonList] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -49,10 +49,10 @@ export default function Buscador({ sidebar, darkMode }) {
     };
 
     return (
-        <>
-            {!sidebar.miniSidebar && (
                 <>
-                    <Select
+                <div className='buscadorMobile'>
+                <Container>
+                <Select
                         options={pokemonList.map((pokemon) => ({
                             value: pokemon.url.split("/")[6],
                             label: `N° ${pokemon.url.split("/")[6]} - ${capitalizeFirstLetter(formatPokemonName(pokemon.name))}`,
@@ -62,16 +62,19 @@ export default function Buscador({ sidebar, darkMode }) {
                         className="mb-2"
                         noOptionsMessage={customNoOptionsMessage}
                     />
-                    <button className="boton" onClick={handleSearch}>
+                    <button className="boton-buscador-home" onClick={handleSearch}>
                         <ion-icon name="search"></ion-icon>
                         <span>{t('navbar_header.search')}</span>
                     </button>
                     
                     {showAlert && <ModalError show={showAlert} handleClose={handleCloseAlert} darkMode={darkMode}/>}
                     {showPokemonModal && <ModalPokemon show={showPokemonModal} handleClose={handleClosePokemonModal} selectedPokemon={selectedPokemon} darkMode={darkMode}/>}
-                </>
-            )}
+                
+                </Container>
+                </div>
+
+</>
             
-        </>
+            
     );
 }

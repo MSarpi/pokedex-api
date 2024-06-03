@@ -13,7 +13,7 @@ export default function Index() {
   const [darkMode, setDarkMode] = useState(false);
 
   const [sidebar, setSidebar] = useState({
-    showMenu: true,
+    showMenu: false,
     miniSidebar: localStorage.getItem("miniSidebar") === "true",
   });
 
@@ -77,7 +77,7 @@ export default function Index() {
         <div>
           <div className="linea"></div>
             <DarkLight darkMode={darkMode} setDarkMode={setDarkMode}/>
-            <Translation />
+            <Translation sidebar={sidebar} />
           </div>
       </div>
 
@@ -90,7 +90,7 @@ export default function Index() {
                 <Route
                   key={ruta.id}
                   path={ruta.href}
-                  element={<ruta.component />}
+                  element={<ruta.component darkMode={darkMode}/>}
                 />
               )
             )}
