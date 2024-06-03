@@ -46,6 +46,9 @@ html body .container-light  {
   --color-boton:rgb(0,0,0); /*Color boton buscar*/
   --color-boton-texto:rgb(255,255,255); /*Color texto boton buscar*/
 
+  --color-boton-home:rgb(0, 78, 167);
+  --color-boton-texto-home:rgb(255,255,255);
+  
   --color-linea:rgb(180,180,180); /*Color HR*/
 
   --color-switch-base :rgb(201,202,206); /*Color fondo switch*/
@@ -81,8 +84,11 @@ html body .container-light  {
   --color-scroll:rgb(192,192,192); /*Color scroll*/
   --color-scroll-hover:rgb(134,134,134); /*Color hover scroll*/
   
-  --color-barra-busqueda: rgb(192,192,192);
-  --color-barra-border: rgb(61, 61, 61);
+  --color-barra-busqueda: rgb(44, 44, 44);
+  --color-barra-border: rgb(97, 97, 97);
+
+  --color-boton-home:rgb(0, 0, 0);
+  --color-boton-texto-home:rgb(255,255,255);
 }
 
 *{
@@ -514,16 +520,15 @@ main.min-main{
     position: absolute; /* 
     Posición absoluta para superposición */
     top: 35%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%; /* Ajusta según sea necesario */
-
     z-index: 2; /* Coloca el marquee en un plano superior */
     background-color: var(--color-barra-busqueda);
-    border: 5px solid var(--color-barra-border);
+    border: 2px solid var(--color-barra-border);
     border-radius: .7rem;
     padding: .5rem;
     text-align: center;
-    margin-left: 1.2rem;
   }
   
   .buscador-container{
@@ -541,8 +546,8 @@ main.min-main{
     justify-content: center;
     border: none;
     border-radius: 10px;
-    background-color: var(--color-boton);
-    color: var(--color-boton-texto);
+    background-color: var(--color-boton-home);
+    color: var(--color-boton-texto-home);
   }
 
   .boton-buscador-home ion-icon{
